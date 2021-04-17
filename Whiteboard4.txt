@@ -19,11 +19,11 @@ Output: true
 
 Clarifying questions: 
 I understand that I am not able to convert the string into an array or use array methods, however may I use built-in methods 
-if I need to? 
+if I need to? // yes
 Am I allowed to solve this in JavaScript? And if I get stuck or forget the exact syntax for something, may I use
-pseudocode? 
+pseudocode? //yes
 If I understand correctly, I want my algorithm to check if each element within the string is unique, 
-and return true if none of the string elements repeat? And false if they do repeat at all. Is that correct? 
+and return true if none of the string elements repeat? And false if they do repeat at all. Is that correct? //yes 
 
 Edge cases:
 Based on the example input/output I know I can potentially expect a single string. Can I expect to always receive
