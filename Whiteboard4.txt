@@ -1,0 +1,60 @@
+Question #4: Checking for Uniqueness
+
+Write an algorithm that determines whether all the elements in a string are unique. 
+You may not convert the string into an array or use array methods to solve this problem. 
+The algorithm should return a boolean.
+
+Example
+Input: "hello"
+Output: false
+
+Input: "copyright"
+Output: true
+
+Input: "copyright l x"
+Output: false
+
+Input: "";
+Output: true
+
+Clarifying questions: 
+I understand that I am not able to convert the string into an array or use array methods, however may I use built-in methods 
+if I need to? 
+Am I allowed to solve this in JavaScript? And if I get stuck or forget the exact syntax for something, may I use
+pseudocode? 
+If I understand correctly, I want my algorithm to check if each element within the string is unique, 
+and return true if none of the string elements repeat? And false if they do repeat at all. Is that correct? 
+
+Edge cases:
+Based on the example input/output I know I can potentially expect a single string. Can I expect to always receive
+a string? //yes
+
+Can I expect some other type of input - like a number? Or could the string be inside of an array? //no
+
+Is there a possibility that I could receive an empty string? //yes
+
+Plan:
+I think that the simplest way to do this would be using Set, since Set only allows you to store unique values. I can then use 
+the Set.prototype.size property to return the number of unique elements in the set object.
+
+The setSize variable is equal to the total number of unique elements - none of the duplicates are included in the set. Now, I can compare 
+setSize to the str.length. If they match then I will return true. Otherwise return false. 
+
+Solution
+
+function isUnique(str) {
+  const setSize = new Set(str).size;
+  if (setSize === str.length) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+Summarize/Code walk through:
+I pass a string with the value of "hello" into my function, I then create a variable called setSize that I set 
+equal to a new Set which I pass the string into, so the new set now contains all of the unique elements from
+my string. Then I chain on the Set.prototype.size property which gives me the actual number of elements inside of my set. 
+Now I can use branching to check the value of setSize against the str.length. If they are the same size that means 
+that there were no duplicates and I will return true. Otherwise, if they are different lengths that means there 
+were duplicates that were mot added to the set and I will return false. 
